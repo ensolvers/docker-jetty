@@ -19,8 +19,8 @@ fi
 
 unzip /var/lib/jetty/webapps/*.war -d /var/lib/jetty/webapps/ROOT
 rm /var/lib/jetty/webapps/*.war
-sed -i "s/active:/active: $ENVIRONMENT/g" $(find /var/lib/jetty/webapps/ROOT | grep application.yaml)
-sed -i "s/\$VERSION/$VERSION/g" $(find /var/lib/jetty/webapps/ROOT | grep application.yaml)
+# sed -i "s/active:/active: $ENVIRONMENT/g" $(find /var/lib/jetty/webapps/ROOT | grep application.yaml)
+# sed -i "s/\$VERSION/$VERSION/g" $(find /var/lib/jetty/webapps/ROOT | grep application.yaml)
 
 if ! command -v -- "$1" >/dev/null 2>&1 ; then
 	set -- java -jar "$JETTY_HOME/start.jar" "$@"
