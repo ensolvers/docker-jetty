@@ -6,4 +6,4 @@ if [[ -z $TAG ]]; then
   TAG="latest"
 fi
 
-docker build -t ensolvers/jetty:$TAG .
+docker build -t ensolvers/jetty:1.0 .
